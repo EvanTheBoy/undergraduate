@@ -72,6 +72,7 @@ def embed_secret_message(image, scale_factor, step, W):
             # 这里的取最大值有待深入研究，这个d如果很大的话，会导致最终bC的值也很大，从而导致p1和p2全部溢出
             # 这样一来会导致无法往图片中嵌入任何信息，visited数组也没有值是1
             d = max(d_max1, d_max2)
+
             # 视情况修改 nS 的值
             nS = step
             # if d != 0:
