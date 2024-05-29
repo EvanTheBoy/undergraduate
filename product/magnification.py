@@ -13,15 +13,18 @@ if __name__ == '__main__':
     magnification_factor = 2.0
 
     # 长度
-    length = 100000
+    length = 10
     secret_message = generate_binary_string(length)
 
-    step = 4
+    step = 5
 
     # 主函数核心逻辑
-    embedded_image, array, magnified_image = embed_secret_message(original_image, magnification_factor,
+    # embedded_image, array, magnified_image = embed_secret_message(original_image, magnification_factor,
+    #                                                               step, secret_message)
+    # secret_information = extract_secret_message(embedded_image, array, step)
+    embedded_image, array, magnified_image, length_map = embed_secret_message(original_image, magnification_factor,
                                                                   step, secret_message)
-    secret_information = extract_secret_message(embedded_image, array, step)
+    secret_information = extract_secret_message(embedded_image, array, length_map)
     print(len(secret_information))
     print(secret_information == secret_message)
     print("----------------")
