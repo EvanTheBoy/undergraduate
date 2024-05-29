@@ -13,7 +13,7 @@ if __name__ == '__main__':
     magnification_factor = 2.0
 
     # 长度
-    length = 10
+    length = 100000
     secret_message = generate_binary_string(length)
 
     step = 5
